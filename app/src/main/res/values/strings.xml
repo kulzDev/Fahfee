@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fah-fee</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_pin">Forgot Pin</string>
+    <string name="play_now">Play Now</string>
+
+</resources>

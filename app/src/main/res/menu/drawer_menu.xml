@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/home_32px"
+            android:title="Home">
+
+        </item>
+
+        <item android:id="@+id/nav_how_to_play"
+            android:icon="@drawable/help_32px"
+            android:title="How To Play">
+
+        </item>
+
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Profile">
+
+        </item>
+
+        <item android:id="@+id/nav_wallet"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="Wallet">
+
+        </item>
+
+        <item android:id="@+id/nav_results"
+            android:icon="@drawable/leaderboard_32px"
+            android:title="Results">
+
+        </item>
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_about_us"
+                android:icon="@drawable/about_50px"
+                android:title="About Us">
+
+            </item>
+
+            <item android:id="@+id/nav_contact_us"
+                android:icon="@drawable/ic_phone_android_black_24dp"
+                android:title="Contact Us">
+
+            </item>
+
+            <item android:id="@+id/nav_log_out"
+                android:icon="@drawable/logout_rounded_left_filled_50px"
+                android:title="Logout">
+
+            </item>
+
+        </menu>
+
+    </item>
+
+
+
+</menu>

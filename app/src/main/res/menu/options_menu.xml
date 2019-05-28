@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+
+        android:title="Edit Name"
+        android:id="@+id/main_name_option"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:title="Reset Mobile"
+        android:id="@+id/main_mobile_option"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:title="Reset Pin"
+        android:id="@+id/main_pin_option"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:title="Log Out"
+        android:id="@+id/main_log_out_option"
+        app:showAsAction="never">
+
+    </item>
+
+</menu>
