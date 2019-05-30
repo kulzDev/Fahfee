@@ -21,7 +21,6 @@ public class LastStepActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_step);
 
-
         mBetNumImage = (CircleImageView) findViewById(R.id.final_image);
         success_msg = (TextView) findViewById(R.id.set_off_msg);
         success_msg.setText("Your bet has been placed!" +
