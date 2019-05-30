@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/full_background"
+    android:padding="2dp"
+    tools:context=".LastStepActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:elevation="20dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/final_image"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/moon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/bet_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bet Number"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/bet_pricee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bet price"
+                        android:textColor="#000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/carddd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.5dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:cardBackgroundColor="#000"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/success"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/ic_done_black_24dp"
+                        app:civ_border_color="#fff"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/set_off_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:text="Your bet has been placed!"
+                        android:textColor="#F44336"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

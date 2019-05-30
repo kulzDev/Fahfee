@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/full_background"
+    tools:context=".PlaceBetActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/full_background"
+        android:padding="4dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FCFCFC"
+            android:elevation="5dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/two"
+                    app:civ_border_color="#000"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/betDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/belleza"
+                        android:text="Date betting on"
+                        android:textSize="10sp"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/betNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/belleza"
+                        android:text="Number betting on"
+                        android:textSize="10sp"
+                        android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/card01"
+            android:layout_alignStart="@+id/card01"
+            android:layout_alignLeft="@+id/card01"
+            android:layout_alignEnd="@+id/card01"
+            android:layout_alignRight="@+id/card01"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="-4dp"
+            android:layout_marginRight="-4dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:title="Bet prices"
+            tools:ignore="UnknownId">
+
+
+            <!--<GridView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="15dp"-->
+            <!--android:id="@+id/gridview"-->
+            <!--android:verticalSpacing="5dp"-->
+            <!--android:numColumns="2"-->
+            <!--android:horizontalSpacing="5dp"></GridView>-->
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000"
+                android:horizontalSpacing="5dp"
+                android:numColumns="2"
+                android:padding="15dp"
+                android:verticalSpacing="5dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+

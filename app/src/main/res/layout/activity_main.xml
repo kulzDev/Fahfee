@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/full_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FC1100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+               android:paddingTop="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/emo"
+                app:civ_border_color="#000"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:text="EmoChina"
+                android:fontFamily="@font/belleza"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/number_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</LinearLayout>
