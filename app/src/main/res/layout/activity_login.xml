@@ -1,165 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#000000"
-    tools:context=".LoginActivity">
-
-    <TextView
-        android:id="@+id/txtLogin"
-        android:layout_width="389dp"
-        android:layout_height="68dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/login"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginLeft="89dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:src="@drawable/web_hi_res_512"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="310dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:background="@drawable/layout_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo">
-
-        <EditText
-            android:id="@+id/inputPhone"
-            android:layout_width="250dp"
-            android:layout_height="45dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="132dp"
-            android:background="@drawable/custom_edit_text"
-            android:drawableLeft="@drawable/ic_phone_android_black_24dp"
-            android:hint="Mobile Number"
-            android:inputType="phone"
-            android:textColor="#5b5b5b"
-            android:textColorHint="#5b5b5b"
-            android:textSize="19sp" />
-
-        <EditText
-            android:id="@+id/inputPin"
-            android:layout_width="250dp"
-            android:layout_height="45dp"
-            android:layout_alignBottom="@+id/inputPhone"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="-71dp"
-            android:background="@drawable/custom_edit_text"
-            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-            android:hint="Pin"
-            android:textColor="#5b5b5b"
-            android:textColorHint="#5b5b5b"
-            android:textSize="19sp" />
-
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="155dp"
-            android:layout_height="45dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="73dp"
-            android:layout_marginRight="73dp"
-            android:layout_marginBottom="36dp"
-            android:background="@drawable/login_btn_style"
-            android:text="@string/login"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:textSize="19sp" />
-
-
-    </RelativeLayout>
-
+    android:orientation="vertical"
+    tools:context=".Activities.Registration_Login.LoginActivity">
 
     <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="47dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <Button
-            android:id="@+id/forgotPinBtn"
-            android:layout_width="130dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/cancel_btn_style"
-            android:text="Forgot Pin"
-            android:textAllCaps="false"
-            android:textColor="#ff0303"
-            android:textSize="19sp" />
 
-        <Button
-            android:id="@+id/registerBtn"
-            android:layout_width="130dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/register_btn_style"
-            android:text="Register"
-            android:textAllCaps="false"
-            android:textSize="19sp" />
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            app:fontFamily="@font/belleza" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/emo"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/layout_style"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/inputPhone"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_edit_text"
+                android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+                android:fontFamily="@font/belleza"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:textColor="#5b5b5b"
+                android:textColorHint="#5b5b5b"
+                android:textSize="19sp" />
+
+            <EditText
+                android:id="@+id/inputPin"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_edit_text"
+                android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                android:fontFamily="@font/belleza"
+                android:hint="Pin"
+                android:inputType="numberPassword"
+                android:textColor="#5b5b5b"
+                android:textColorHint="#5b5b5b"
+                android:textSize="19sp" />
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="155dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:background="@drawable/login_btn_style"
+                android:fontFamily="@font/belleza"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/register_btn_style"
+                android:fontFamily="@font/belleza"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/forgotPinBtn"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/cancel_btn_style"
+                android:fontFamily="@font/belleza"
+                android:text="Forgot Pin"
+                android:textAllCaps="false"
+                android:textColor="#ff0303"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-
-
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

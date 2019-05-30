@@ -11,16 +11,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EditProfilePageActivity"></activity>
         <activity android:name=".HomePageActivity" />
-        <activity android:name=".ProfilePageActivity" />
-        <activity android:name=".PinRetrievalPageActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".BetTimeActivity" />
+        <activity android:name=".LastStepActivity" />
+        <activity android:name=".PlaceBetActivity" />
+        <activity android:name=".Activities.Registration_Login.ProfilePageActivity" />
+        <activity android:name=".Activities.Registration_Login.PinRetrievalPageActivity" />
+        <activity android:name=".Activities.Registration_Login.RegistrationActivity" />
+        <activity android:name=".Activities.Registration_Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -4,107 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".HomePageActivity">
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/web_hi_res_512"/>
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="350dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/register_btn_style"
-        android:text="@string/play_now"
-        android:textSize="30sp"/>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#fb0303">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/emo"
+                app:civ_border_color="#ffffff"
+                android:padding="10dp"
+                app:civ_border_width="2dp" />
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/register_btn_style"
+                android:padding="10dp"
+                android:text="@string/play_now"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:numColumns="3"
+                android:padding="15dp"
+                android:verticalSpacing="5dp"></GridView>
+        </LinearLayout>
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginTop="450dp"
-        android:orientation="horizontal">
-
-        <GridLayout
-
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_marginLeft="20dp">
-
-            <ImageButton
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/white"
-                android:src="@drawable/ic_account_circle_black_24dp"/>
-
-            <ImageButton
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/white"
-                android:src="@drawable/ic_casino_black_24dp"/>
-
-            <ImageButton
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/white"
-                android:src="@drawable/ic_schedule_black_24dp"/>
-        </GridLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:layout_marginTop="580dp"
-    android:orientation="horizontal">
-
-        <GridLayout
-
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_marginLeft="20dp">
-
-            <ImageButton
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/white"
-                android:src="@drawable/ic_account_balance_wallet_black_24dp"/>
-
-            <ImageButton
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/white"
-                android:src="@drawable/ic_help_outline_black_24dp"/>
-
-            <ImageButton
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="20dp"
-                android:background="@android:color/white"
-                android:src="@drawable/ic_phone_black_24dp"/>
-
-        </GridLayout>
-
-</LinearLayout>
 
 </RelativeLayout>
 
