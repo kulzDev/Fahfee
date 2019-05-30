@@ -41,6 +41,5 @@ public class LastStepActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
     }
 }
