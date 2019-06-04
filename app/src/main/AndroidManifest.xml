@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditProfilePageActivity"></activity>
+        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".HowToActivity" />
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".DrawTimeActivity" />
+        <activity android:name=".NumbersActivity" />
+        <activity android:name=".EditProfilePageActivity" />
         <activity android:name=".HomePageActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BetTimeActivity" />

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -27,7 +28,7 @@ public class HomePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        play_btn = (Button)findViewById(R.id.btn_play);
+        play_btn = (Button) findViewById(R.id.btn_play);
 
         menuGrid = (GridView) findViewById(R.id.gridview);
         CustomAdapter customAdapter = new CustomAdapter();
@@ -36,12 +37,26 @@ public class HomePageActivity extends AppCompatActivity {
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePageActivity.this,MainActivity.class);
+                Intent intent = new Intent(HomePageActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
+
+        /*menuGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case R.drawable.one:
+                        Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
+                        startActivity(profile);
+                        break;
+                }
+            }
+        });*/
+
     }
+
 
     //GridView Adapter
     private class CustomAdapter extends BaseAdapter {
@@ -68,6 +83,36 @@ public class HomePageActivity extends AppCompatActivity {
 
             namee.setText(muneItem[position]);
             image.setImageResource(itemList[position]);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (muneItem[0].contains("My profile")) {
+                        Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
+                        startActivity(profile);
+                    } else if (muneItem[1].contains("Numbers")){
+                        Intent profile = new Intent(HomePageActivity.this, NumbersActivity.class);
+                        startActivity(profile);
+                    }
+                    else if (muneItem[2].contains("Draw times")){
+                        Intent profile = new Intent(HomePageActivity.this, DrawTimeActivity.class);
+                        startActivity(profile);
+                    }
+                    else if (muneItem[3].contains("Wallet")){
+                        Intent profile = new Intent(HomePageActivity.this, WalletActivity.class);
+                        startActivity(profile);
+                    }
+                    else if (muneItem[4].contains("How to!")){
+                        Intent profile = new Intent(HomePageActivity.this, HowToActivity.class);
+                        startActivity(profile);
+                    }
+                    else if (muneItem[5].contains("Contact Us")){
+                        Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
+                        startActivity(profile);
+                    }
+
+                }
+            });
             return view;
 
         }
