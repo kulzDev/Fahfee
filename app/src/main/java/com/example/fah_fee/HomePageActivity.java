@@ -84,26 +84,26 @@ public class HomePageActivity extends AppCompatActivity {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (menuItem[0].contains("My profile")) {
+                    if (menuItem[0].equals("My profile")) {
                         Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
                         startActivity(profile);
-                    } else if (menuItem[1].contains("Numbers")){
+                    } else if (menuItem[1].equals("Numbers")){
                         Intent profile = new Intent(HomePageActivity.this, NumbersActivity.class);
                         startActivity(profile);
                     }
-                    else if (menuItem[2].contains("Draw times")){
+                    else if (menuItem[2].equals("Draw times")){
                         Intent profile = new Intent(HomePageActivity.this, DrawTimeActivity.class);
                         startActivity(profile);
                     }
-                    else if (menuItem[3].contains("Wallet")){
+                    else if (menuItem[3].equals("Wallet")){
                         Intent profile = new Intent(HomePageActivity.this, WalletActivity.class);
                         startActivity(profile);
                     }
-                    else if (menuItem[4].contains("How to!")){
+                    else if (menuItem[4].equals("How to!")){
                         Intent profile = new Intent(HomePageActivity.this, HowToActivity.class);
                         startActivity(profile);
                     }
-                    else if (menuItem[5].contains("Contact Us")){
+                    else if (menuItem[5].equals("Contact Us")){
                         Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
                         startActivity(profile);
                     }
