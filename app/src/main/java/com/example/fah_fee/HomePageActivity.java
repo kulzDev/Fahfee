@@ -5,21 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 public class HomePageActivity extends AppCompatActivity {
 
     GridView menuGrid;
     Button play_btn;
 
-    String[] muneItem = {"My profile", "Numbers ", "Draw times", "Wallet", "How to!", "Contact Us"};
+    String[] menuItem = {"My profile", "Numbers ", "Draw times", "Wallet", "How to!", "Contact Us"};
     int[] itemList = {R.drawable.one, R.drawable.two, R.drawable.three,
             R.drawable.four, R.drawable.five, R.drawable.six};
 
@@ -81,32 +78,32 @@ public class HomePageActivity extends AppCompatActivity {
             TextView namee = view.findViewById(R.id.fruits);
             ImageView image = view.findViewById(R.id.images);
 
-            namee.setText(muneItem[position]);
+            namee.setText(menuItem[position]);
             image.setImageResource(itemList[position]);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (muneItem[0].contains("My profile")) {
+                    if (menuItem[0].contains("My profile")) {
                         Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
                         startActivity(profile);
-                    } else if (muneItem[1].contains("Numbers")){
+                    } else if (menuItem[1].contains("Numbers")){
                         Intent profile = new Intent(HomePageActivity.this, NumbersActivity.class);
                         startActivity(profile);
                     }
-                    else if (muneItem[2].contains("Draw times")){
+                    else if (menuItem[2].contains("Draw times")){
                         Intent profile = new Intent(HomePageActivity.this, DrawTimeActivity.class);
                         startActivity(profile);
                     }
-                    else if (muneItem[3].contains("Wallet")){
+                    else if (menuItem[3].contains("Wallet")){
                         Intent profile = new Intent(HomePageActivity.this, WalletActivity.class);
                         startActivity(profile);
                     }
-                    else if (muneItem[4].contains("How to!")){
+                    else if (menuItem[4].contains("How to!")){
                         Intent profile = new Intent(HomePageActivity.this, HowToActivity.class);
                         startActivity(profile);
                     }
-                    else if (muneItem[5].contains("Contact Us")){
+                    else if (menuItem[5].contains("Contact Us")){
                         Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
                         startActivity(profile);
                     }
