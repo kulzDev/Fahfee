@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".WalletActivity">
 
-    <TextView
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Wallet"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:fontFamily="@font/belleza"
-        android:padding="25dp"/>
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="5dp">
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_keyboard_backspace_black_24dp"
+            android:padding="3dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Wallet"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/belleza" />
+    </android.support.v7.widget.Toolbar>
 
 </RelativeLayout>

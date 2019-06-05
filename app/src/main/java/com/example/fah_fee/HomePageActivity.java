@@ -12,6 +12,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.fah_fee.Activities.Registration_Login.ProfilePageActivity;
+
 public class HomePageActivity extends AppCompatActivity {
 
     GridLayout menuGrid;
@@ -26,14 +28,19 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         play_btn = (Button) findViewById(R.id.btn_play);
-        menuGrid = (GridLayout) findViewById(R.id.grid);
-        profile_btn = (Button)findViewById(R.id.profile_btn);
-        numbers_btn = (Button)findViewById(R.id.numbers_btn);
-        draw_times_btn = (Button)findViewById(R.id.draw_times_btn);
-        wallet_btn = (Button)findViewById(R.id.wallet_btn);
-        how_to_btn = (Button)findViewById(R.id.how_to_btn);
-        contact_btn = (Button)findViewById(R.id.contact_btn);
+        profile_btn = (Button) findViewById(R.id.profile_btn);
+        numbers_btn = (Button) findViewById(R.id.numbers_btn);
+        draw_times_btn = (Button) findViewById(R.id.draw_times_btn);
+        wallet_btn = (Button) findViewById(R.id.wallet_btn);
+        how_to_btn = (Button) findViewById(R.id.how_to_btn);
+        contact_btn = (Button) findViewById(R.id.contact_btn);
 
+
+        menuItems();
+
+    }
+
+    public void menuItems() {
 
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,48 +49,11 @@ public class HomePageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        menuItems();
-
-
-
-//        menuGrid.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                switch (v.getId()){
-//                    case R.id.profile_btn:
-//                        Intent profile = new Intent(HomePageActivity.this,EditProfilePageActivity.class);
-//                        startActivity(profile);
-//                        break;
-//                    case R.id.numbers_btn:
-//                        Intent numbers = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
-//                        startActivity(numbers);
-//                        break;
-//                    case R.id.draw_times_btn:
-//                        Intent draw = new Intent(HomePageActivity.this, DrawTimeActivity.class);
-//                        startActivity(draw);
-//                        break;
-//                    case  R.id.wallet_btn:
-//                        Intent wallet = new Intent(HomePageActivity.this, WalletActivity.class);
-//                        startActivity(wallet);
-//                        break;
-//                    case R.id.how_to_btn:
-//                        Intent howTo = new Intent(HomePageActivity.this, HowToActivity.class);
-//                        startActivity(howTo);
-//                        break;
-//                    case R.id.contact_btn:
-//                        Intent contact = new Intent(HomePageActivity.this, ContactActivity.class);
-//                        startActivity(contact);
-//                        break;
-//                }
-//            }
-//        });
-    }
-
-    public void menuItems(){
+        
         profile_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent profile = new Intent(HomePageActivity.this,EditProfilePageActivity.class);
+                Intent profile = new Intent(HomePageActivity.this, ProfilePageActivity.class);
                 startActivity(profile);
             }
         });
