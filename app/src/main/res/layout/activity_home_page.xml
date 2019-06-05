@@ -39,7 +39,8 @@
                 android:padding="10dp"
                 android:paddingBottom="25dp"
                 android:text="@string/play_now"
-                android:textSize="30sp" />
+                android:textSize="30sp"
+                android:fontFamily="@font/belleza"/>
         </LinearLayout>
 
 
