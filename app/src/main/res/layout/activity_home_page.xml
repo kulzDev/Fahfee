@@ -24,9 +24,9 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
+                android:padding="10dp"
                 android:src="@drawable/emo"
                 app:civ_border_color="#ffffff"
-                android:padding="10dp"
                 app:civ_border_width="2dp" />
 
             <Button
@@ -42,19 +42,75 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_margin="10dp">
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp">
 
-            <GridView
-                android:id="@+id/gridview"
+            <GridLayout
+                android:id="@+id/grid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:horizontalSpacing="5dp"
-                android:numColumns="3"
-                android:padding="15dp"
-                android:verticalSpacing="5dp"></GridView>
+                android:layout_margin="0dp"
+                android:layout_gravity="center">
+
+
+
+                <Button
+                    android:id="@+id/profile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                 />
+
+                <Button
+                    android:id="@+id/numbers_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Numbers"
+                    android:layout_row="0"
+                    android:layout_column="1" />
+                <Button
+                    android:id="@+id/draw_times_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Draw times"
+                    android:layout_row="0"
+                    android:layout_column="2" />
+
+
+                <!--next line-->
+
+
+                    <Button
+                        android:id="@+id/wallet_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wallet"
+                        android:layout_row="1"
+                        android:layout_column="0" />
+
+                    <Button
+                        android:id="@+id/how_to_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="How to"
+                        android:layout_row="1"
+                        android:layout_column="1" />
+                    <Button
+                        android:id="@+id/contact_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        android:layout_row="1"
+                        android:layout_column="2" />
+
+
+
+            </GridLayout>
         </LinearLayout>
 
     </LinearLayout>

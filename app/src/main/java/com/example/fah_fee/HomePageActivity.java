@@ -7,18 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HomePageActivity extends AppCompatActivity {
 
-    GridView menuGrid;
+    GridLayout menuGrid;
     Button play_btn;
 
-    String[] menuItem = {"My profile", "Numbers ", "Draw times", "Wallet", "How to!", "Contact Us"};
-    int[] itemList = {R.drawable.one, R.drawable.two, R.drawable.three,
-            R.drawable.four, R.drawable.five, R.drawable.six};
+    //GridLayout Buttons
+    Button profile_btn, numbers_btn, draw_times_btn, wallet_btn, how_to_btn, contact_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,14 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         play_btn = (Button) findViewById(R.id.btn_play);
+        menuGrid = (GridLayout) findViewById(R.id.grid);
+        profile_btn = (Button)findViewById(R.id.profile_btn);
+        numbers_btn = (Button)findViewById(R.id.numbers_btn);
+        draw_times_btn = (Button)findViewById(R.id.draw_times_btn);
+        wallet_btn = (Button)findViewById(R.id.wallet_btn);
+        how_to_btn = (Button)findViewById(R.id.how_to_btn);
+        contact_btn = (Button)findViewById(R.id.contact_btn);
 
-        menuGrid = (GridView) findViewById(R.id.gridview);
-        CustomAdapter customAdapter = new CustomAdapter();
-        menuGrid.setAdapter(customAdapter);
 
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,80 +42,87 @@ public class HomePageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        menuItems();
 
 
-        /*menuGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case R.drawable.one:
-                        Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
-                        startActivity(profile);
-                        break;
-                }
-            }
-        });*/
 
+//        menuGrid.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                switch (v.getId()){
+//                    case R.id.profile_btn:
+//                        Intent profile = new Intent(HomePageActivity.this,EditProfilePageActivity.class);
+//                        startActivity(profile);
+//                        break;
+//                    case R.id.numbers_btn:
+//                        Intent numbers = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
+//                        startActivity(numbers);
+//                        break;
+//                    case R.id.draw_times_btn:
+//                        Intent draw = new Intent(HomePageActivity.this, DrawTimeActivity.class);
+//                        startActivity(draw);
+//                        break;
+//                    case  R.id.wallet_btn:
+//                        Intent wallet = new Intent(HomePageActivity.this, WalletActivity.class);
+//                        startActivity(wallet);
+//                        break;
+//                    case R.id.how_to_btn:
+//                        Intent howTo = new Intent(HomePageActivity.this, HowToActivity.class);
+//                        startActivity(howTo);
+//                        break;
+//                    case R.id.contact_btn:
+//                        Intent contact = new Intent(HomePageActivity.this, ContactActivity.class);
+//                        startActivity(contact);
+//                        break;
+//                }
+//            }
+//        });
     }
 
+    public void menuItems(){
+        profile_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profile = new Intent(HomePageActivity.this,EditProfilePageActivity.class);
+                startActivity(profile);
+            }
+        });
 
-    //GridView Adapter
-    private class CustomAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return itemList.length;
-        }
+        numbers_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent numbers = new Intent(HomePageActivity.this, NumbersActivity.class);
+                startActivity(numbers);
+            }
+        });
+        draw_times_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent draw = new Intent(HomePageActivity.this, DrawTimeActivity.class);
+                startActivity(draw);
+            }
+        });
+        wallet_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent wallet = new Intent(HomePageActivity.this, WalletActivity.class);
+                startActivity(wallet);
+            }
+        });
+        how_to_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent howTo = new Intent(HomePageActivity.this, HowToActivity.class);
+                startActivity(howTo);
+            }
+        });
 
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View view = getLayoutInflater().inflate(R.layout.menu_item, null);
-            TextView namee = view.findViewById(R.id.fruits);
-            ImageView image = view.findViewById(R.id.images);
-
-            namee.setText(menuItem[position]);
-            image.setImageResource(itemList[position]);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (menuItem[0].equals("My profile")) {
-                        Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
-                        startActivity(profile);
-                    } else if (menuItem[1].equals("Numbers")){
-                        Intent profile = new Intent(HomePageActivity.this, NumbersActivity.class);
-                        startActivity(profile);
-                    }
-                    else if (menuItem[2].equals("Draw times")){
-                        Intent profile = new Intent(HomePageActivity.this, DrawTimeActivity.class);
-                        startActivity(profile);
-                    }
-                    else if (menuItem[3].equals("Wallet")){
-                        Intent profile = new Intent(HomePageActivity.this, WalletActivity.class);
-                        startActivity(profile);
-                    }
-                    else if (menuItem[4].equals("How to!")){
-                        Intent profile = new Intent(HomePageActivity.this, HowToActivity.class);
-                        startActivity(profile);
-                    }
-                    else if (menuItem[5].equals("Contact Us")){
-                        Intent profile = new Intent(HomePageActivity.this, EditProfilePageActivity.class);
-                        startActivity(profile);
-                    }
-
-                }
-            });
-            return view;
-
-        }
+        contact_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent contact = new Intent(HomePageActivity.this, ContactActivity.class);
+                startActivity(contact);
+            }
+        });
     }
 }
