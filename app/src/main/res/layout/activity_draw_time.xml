@@ -31,91 +31,24 @@
             android:textSize="20sp" />
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
-        android:id="@+id/lib"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/times"
+        android:textStyle="bold"
         android:layout_below="@+id/tool"
-        android:layout_margin="20dp"
-        android:orientation="vertical"
-        android:padding="10sp">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/belleza"
-            android:paddingTop="15dp"
-            android:text="Bet Times available during the day"
-            android:textSize="25sp" />
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            android:paddingBottom="20dp"
-            app:cardBackgroundColor="#E91E63"
-            app:cardCornerRadius="25dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/belleza"
-                    android:text="Cutoff time"
-                    android:textSize="30sp" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lib"
-        android:layout_margin="20dp"
-        android:orientation="vertical"
-        android:padding="10sp">
+        android:text="Draw times available throughout the day"
+        android:fontFamily="@font/belleza"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"/>
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            app:cardBackgroundColor="#E91E63"
-            app:cardCornerRadius="25dp">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/draw_time_rv"
+        android:layout_below="@id/times"
+        android:paddingTop="20dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/belleza"
-                    android:text="Cutoff time"
-                    android:textSize="30sp" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
 </RelativeLayout>

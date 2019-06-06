@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/belleza"
                     android:text="Number betting on"
-                    android:textSize="10sp"
+                    android:textSize="20sp"
                     android:textColor="#000"/>
 
                 <TextView
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/belleza"
                     android:text="R5 pays R120"
-                    android:textSize="10sp"
+                    android:textSize="20sp"
                     android:textColor="#000"/>
             </LinearLayout>
         </LinearLayout>

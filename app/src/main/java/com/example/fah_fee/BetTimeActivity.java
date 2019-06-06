@@ -34,10 +34,7 @@ public class BetTimeActivity extends AppCompatActivity {
         bet_time_rw = (RecyclerView)findViewById(R.id.bet_time_rv);
 
         Intent intent = getIntent();
-//        intent.getStringExtra("prices");
-//        intent.getStrisngExtra("betNum");
-//        intent.getIntExtra("image",0);
-//        intent.getFloatExtra("priceList",0);
+//
         betImage.setImageResource(intent.getIntExtra("image",0));
         betNumber.setText(intent.getStringExtra("betNum"));
         betPrice.setText(intent.getStringExtra("prices"));

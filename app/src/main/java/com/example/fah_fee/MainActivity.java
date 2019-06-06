@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //numberList = new NumberRecyclerAdapter(this, getNumbers());
         numberList = new NumberRecyclerAdapter(this, getNumbers());
 
         number_rv = (RecyclerView) findViewById(R.id.number_rv);
