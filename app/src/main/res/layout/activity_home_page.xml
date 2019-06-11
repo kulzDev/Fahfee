@@ -56,6 +56,7 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_row="0"
+                android:drawableTop="@drawable/profile"
                 android:layout_column="0"
                 android:text="Profile" />
 
@@ -65,7 +66,8 @@
                 android:layout_height="110dp"
                 android:layout_row="0"
                 android:layout_column="1"
-                android:text="Numbers" />
+                android:text="Numbers"
+                android:drawableTop="@drawable/numbers"/>
 
             <Button
                 android:id="@+id/draw_times_btn"
@@ -73,7 +75,8 @@
                 android:layout_height="110dp"
                 android:layout_row="0"
                 android:layout_column="2"
-                android:text="Draw times" />
+                android:text="Draw times"
+                android:drawableTop="@drawable/time"/>
 
 
             <!--next line-->
@@ -85,7 +88,8 @@
                 android:layout_height="110dp"
                 android:layout_row="1"
                 android:layout_column="0"
-                android:text="Wallet" />
+                android:text="Wallet"
+                android:drawableTop="@drawable/wallet"/>
 
             <Button
                 android:id="@+id/how_to_btn"
@@ -93,7 +97,8 @@
                 android:layout_height="110dp"
                 android:layout_row="1"
                 android:layout_column="1"
-                android:text="How to" />
+                android:text="How to"
+                android:drawableTop="@drawable/how"/>
 
             <Button
                 android:id="@+id/contact_btn"
@@ -101,7 +106,8 @@
                 android:layout_height="110dp"
                 android:layout_row="1"
                 android:layout_column="2"
-                android:text="Contact" />
+                android:text="Contact"
+                android:drawableTop="@drawable/contact"/>
 
 
         </GridLayout>
