@@ -35,9 +35,7 @@ public class HomePageActivity extends AppCompatActivity {
         how_to_btn = (Button) findViewById(R.id.how_to_btn);
         contact_btn = (Button) findViewById(R.id.contact_btn);
 
-
         menuItems();
-
     }
 
     public void menuItems() {
